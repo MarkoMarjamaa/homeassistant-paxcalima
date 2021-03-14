@@ -3,6 +3,6 @@
 	"name": "Pax Calima",
 	"documentation": "",
 	"dependencies": [],
-	"requirements": [],
+	"requirements": ["calima==2.0.0"],
 	"codeowners": [""]
 }
