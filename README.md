@@ -3,7 +3,7 @@ Home assistant Custom component for  Pax Calima fan
 
 This is offered AS IS. Feel free to fork. 
 
-##Installation
+## Installation
 
 1. Find out the MAC address and pin of your Pax Calima with calima -s. Pin code is in you fans motor unit. 
 1. Put __init__.py, sensor.py, manifest.json into <config>/custom_components/paxcalima/ on your home assistant installation (where <config> is the directory where your config file resides).
