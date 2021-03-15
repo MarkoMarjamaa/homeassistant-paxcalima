@@ -16,6 +16,40 @@ cd pycalima-master
 #Install as python package
 # cmdline.py is in wrong directory, move it
 mv cmdline.py pycalima
+```
+Pycalima doesn't return Mode properly so fix this from Calima.py
+```
+    def getMode(self):
+        v = unpack('<B', self._readUUID(CHARACTERISTIC_MODE))
+        if v == 0:
+            return "MultiMode"
+        elif v == 1:
+            return "DraftShutterMode"
+        elif v == 2:
+            return "WallSwitchExtendedRuntimeMode"
+        elif v == 3:
+            return "WallSwitchNoExtendedRuntimeMode"
+        elif v == 4:
+            return "HeatDistributionMode"
+```
+Replace with 
+```
+    def getMode(self):
+        v = unpack('<B', self._readUUID(CHARACTERISTIC_MODE))
+        if v[0] == 0:
+            return "MultiMode"
+        elif v[0] == 1:
+            return "DraftShutterMode"
+        elif v[0] == 2:
+            return "WallSwitchExtendedRuntimeMode"
+        elif v[0] == 3:
+            return "WallSwitchNoExtendedRuntimeMode"
+        elif v[0] == 4:
+            return "HeatDistributionMode"
+```
+
+And install package
+```
 pip3 install . 
 # README.rst mentions run.py but this version does not have it. Check it from other forks
 
