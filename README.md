@@ -6,6 +6,23 @@ Developed and tested in HA version 0.108.9.
 
 ## Installation
 
+1. First install pycalima
+```
+#Get the latest to your work directory 
+wget https://github.com/PatrickE94/pycalima/archive/master.zip
+unzip master.zip
+cd pycalima-master
+
+#Install as python package
+# cmdline.py is in wrong directory, move it
+mv cmdline.py pycalima
+pip3 install . 
+# README.rst mentions run.py but this version does not have it. Check it from other forks
+
+# now calima cmdline works
+calima -h
+```
+
 1. Find out the MAC address and pin of your Pax Calima with calima -s. Pin code is in you fans motor unit. 
 1. Put __init__.py, sensor.py, manifest.json into <config>/custom_components/paxcalima/ on your home assistant installation (where <config> is the directory where your config file resides).
 1. Add the following to your configuration.yaml (or modify your sensor heading, if you already have one):
