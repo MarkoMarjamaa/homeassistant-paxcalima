@@ -2,7 +2,7 @@
 Home assistant Custom component for  Pax Calima fan
 
 This is offered AS IS. Feel free to fork. 
-Developed ans testen in HA version 0.108.9. 
+Developed and tested in HA version 0.108.9. 
 
 ## Installation
 
