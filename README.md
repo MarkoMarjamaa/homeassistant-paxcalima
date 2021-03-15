@@ -15,6 +15,7 @@ sensor:
   - platform: paxcalima
     mac: 00:11:22:AA:BB:CC # replace with MAC of your Pax Calima 
     pin: 57854677 # Replace with you pin code
+    name: Projector Room(optional)
 ```
 
 Then restart Home Assistant and if everything works, you'll have some new sensors.
