@@ -4,6 +4,9 @@ Home assistant Custom component for  Pax Calima fan
 This is offered AS IS. Feel free to fork. 
 Developed and tested in HA version 0.108.9. 
 
+This only works til v.2022.6. v.2022.7 uses python 3.10 and the bluetooth library used does not work wit it. 
+You should check https://github.com/eriknn/ha-pax_ble
+
 ## Installation
 
 1. First install pycalima
